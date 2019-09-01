@@ -17,6 +17,7 @@
     "gatsby": "^2.13.73",
     "gatsby-plugin-emotion": "^4.1.4",
     "gatsby-plugin-sass": "^2.1.12",
+    "gatsby-plugin-typescript": "^2.1.5",
     "gatsby-plugin-typography": "^2.3.5",
     "gatsby-source-filesystem": "^2.1.18",
     "gatsby-transformer-remark": "^2.6.19",
@@ -29,6 +30,9 @@
     "typography-theme-kirkham": "^0.16.19"
   },
   "devDependencies": {
+    "@types/node": "^12.7.3",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
     "prettier": "^1.18.2"
   },
   "repository": {

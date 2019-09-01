@@ -17,6 +17,16 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
+    // gatsby-plugin-google-analytics
+    // gatsby-plugin-offline
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: `jsx`, // defaults to "React"
+        allExtensions: true, // defaults to false
+      },
+    },
     `gatsby-transformer-remark`,
     "gatsby-plugin-sass",
     {
