@@ -16,9 +16,12 @@ module.exports = {
         name: `src`,
         path: `${__dirname}/src/`,
       },
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
     },
-    // gatsby-plugin-google-analytics
-    // gatsby-plugin-offline
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -29,8 +32,12 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-asciidoc`,
+      options: {
+        attributes: {
+          imagesdir: `/images`,
+        },
+      },
     },
-    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-typography",
       options: {
@@ -44,5 +51,8 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    // gatsby-plugin-offline
+    "gatsby-plugin-sass",
+    // gatsby-plugin-google-analytics
   ],
 }
