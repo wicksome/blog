@@ -17,24 +17,24 @@ export default ({ data }) => {
         >
           Amazing Pandas Eating Things
         </h1>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        <h4>{data.allAsciidoc.totalCount} Posts</h4>
+        {data.allAsciidoc.edges.map(({ node }) => (
           <div key={node.id}>
             <h3
               css={css`
                 margin-bottom: ${rhythm(1 / 4)};
               `}
             >
-              {node.frontmatter.title}{" "}
+              {node.document.title}{" "}
               <span
                 css={css`
                   color: #bbb;
                 `}
               >
-                — {node.frontmatter.date}
+                — {node.revision !== null && node.revision.date}
               </span>
             </h3>
-            <p>{node.excerpt}</p>
+            {/* <p>{node.excerpt}</p> */}
           </div>
         ))}
       </div>
@@ -44,16 +44,19 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allAsciidoc {
       totalCount
       edges {
         node {
           id
-          frontmatter {
+          html
+          document {
             title
-            date(formatString: "DD MMMM, YYYY")
+            main
           }
-          excerpt
+          revision {
+            date
+          }
         }
       }
     }

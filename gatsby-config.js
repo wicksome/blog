@@ -27,6 +27,14 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
+    {
+      resolve: `gatsby-transformer-asciidoc`,
+      options: {
+        attributes: {
+          showtitle: true,
+        },
+      },
+    },
     `gatsby-transformer-remark`,
     "gatsby-plugin-sass",
     {
