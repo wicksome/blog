@@ -1,28 +1,4 @@
 = Asciidoctor Demo
-////
-Big ol' comment
-
-sittin' right 'tween this here title 'n header metadata
-////
-Dan Middlename Allen <thedoc@asciidoctor.org>
-v2.0, February 2003: Rewritten for version 2
-:description: A demo of Asciidoctor. This document +
-              exercises numerous features of AsciiDoc +
-              to test Asciidoctor compliance.
-:library: Asciidoctor
-ifdef::asciidoctor[]
-:source-highlighter: coderay
-endif::asciidoctor[]
-:idprefix:
-:stylesheet: asciidoc.css
-:imagesdir: images
-//:backend: docbook45
-//:backend: html5
-//:doctype: book
-//:sectids!:
-:plus: &#43;
-:page-title: Article
-:page-path: /my-blog-entry1
 :page-category: My Category
  
 [role='lead']

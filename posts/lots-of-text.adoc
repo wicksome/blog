@@ -2,10 +2,6 @@
 Firstname Lastname <author@asciidoctor.org>
 1.0, July 29, 2014, Asciidoctor 1.5 article template
 :toc:
-:icons: font
-:quick-uri: http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
-:page-title: AsciiDoc Article Title1
-:page-path: /my-blog-entry2
 :page-category: My Category
 
 Content entered directly below the header but before the first section heading is called the preamble.

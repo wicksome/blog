@@ -49,7 +49,6 @@ export const query = graphql`
       edges {
         node {
           pageAttributes {
-            title
             category
           }
           id
