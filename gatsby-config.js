@@ -29,13 +29,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-transformer-asciidoc`,
-      options: {
-        attributes: {
-          showtitle: true,
-        },
-      },
     },
-    `gatsby-transformer-remark`,
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-typography",

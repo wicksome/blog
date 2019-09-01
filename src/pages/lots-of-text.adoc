@@ -4,6 +4,9 @@ Firstname Lastname <author@asciidoctor.org>
 :toc:
 :icons: font
 :quick-uri: http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
+:page-title: AsciiDoc Article Title1
+:page-path: /my-blog-entry2
+:page-category: My Category
 
 Content entered directly below the header but before the first section heading is called the preamble.
 

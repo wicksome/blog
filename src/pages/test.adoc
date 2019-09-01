@@ -21,6 +21,9 @@ endif::asciidoctor[]
 //:doctype: book
 //:sectids!:
 :plus: &#43;
+:page-title: Article
+:page-path: /my-blog-entry1
+:page-category: My Category
  
 [role='lead']
 This is a demonstration of {library}. And this is the preamble of this document.

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
@@ -25,7 +25,7 @@ export default ({ data }) => {
                 margin-bottom: ${rhythm(1 / 4)};
               `}
             >
-              {node.document.title}{" "}
+              <Link to={node.fields.slug}>{node.document.title}</Link>
               <span
                 css={css`
                   color: #bbb;
@@ -44,10 +44,14 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allAsciidoc {
+    allAsciidoc(sort: { fields: [revision___date], order: DESC }) {
       totalCount
       edges {
         node {
+          pageAttributes {
+            title
+            category
+          }
           id
           html
           document {
@@ -56,6 +60,9 @@ export const query = graphql`
           }
           revision {
             date
+          }
+          fields {
+            slug
           }
         }
       }

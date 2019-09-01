@@ -1,5 +1,8 @@
 = Hello, AsciiDoc!
 Doc Writer <doc@example.com>
+:page-title: Article
+:page-path: /hello-world
+:page-category: My Category
 
 An introduction to http://asciidoc.org[AsciiDoc].
 
