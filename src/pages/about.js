@@ -1,6 +1,9 @@
 import React from "react"
+import Layout from "../components/layout"
 export default () => (
-  <div style={{ color: `teal` }}>
-    <p>Such wow. Very React.</p>
-  </div>
+  <Layout>
+    <div style={{ color: `teal` }}>
+      <p>Such wow. Very React.</p>
+    </div>
+  </Layout>
 )
