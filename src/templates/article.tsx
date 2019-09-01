@@ -7,41 +7,6 @@ export default ({ data }) => {
   return (
     <Layout>
       <h1>{data.asciidoc.document.title} </h1>
-      {data.asciidoc.author && (
-        <table>
-          <thead>
-            <tr>
-              <td colSpan="2">Author metadata</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>author.fullName</th>
-              <td>{data.asciidoc.author.fullName}</td>
-            </tr>
-            <tr>
-              <th>author.firstName</th>
-              <td>{data.asciidoc.author.firstName}</td>
-            </tr>
-            <tr>
-              <th>author.lastName</th>
-              <td>{data.asciidoc.author.lastName}</td>
-            </tr>
-            <tr>
-              <th>author.middleName</th>
-              <td>{data.asciidoc.author.middleName}</td>
-            </tr>
-            <tr>
-              <th>author.authorInitials</th>
-              <td>{data.asciidoc.author.authorInitials}</td>
-            </tr>
-            <tr>
-              <th>author.email</th>
-              <td>{data.asciidoc.author.email}</td>
-            </tr>
-          </tbody>
-        </table>
-      )}
       {data.asciidoc.revision && (
         <table>
           <thead>
@@ -74,20 +39,10 @@ export const query = graphql`
       html
       document {
         title
-        subtitle
-        main
       }
       revision {
         date
         number
-      }
-      author {
-        fullName
-        firstName
-        lastName
-        middleName
-        authorInitials
-        email
       }
     }
   }

@@ -14,9 +14,6 @@ exports.createPages = ({ graphql, actions }) => {
               document {
                 title
               }
-              pageAttributes {
-                category
-              }
               revision {
                 date
               }
@@ -55,8 +52,9 @@ exports.createPages = ({ graphql, actions }) => {
 
 exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
   const { createNodeField } = actions
-
+  
   if (node.internal.type === `Asciidoc`) {
+    console.log(node)
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,

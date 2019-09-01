@@ -48,14 +48,10 @@ export const query = graphql`
       totalCount
       edges {
         node {
-          pageAttributes {
-            category
-          }
           id
           html
           document {
             title
-            main
           }
           revision {
             date
