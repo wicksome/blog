@@ -6,7 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Wicksome Blog`,
+    title: `Documents`,
+    subtitle: `WICKSOME`,
   },
   /* Your site config here */
   plugins: [
@@ -39,19 +40,7 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-typography",
-      options: {
-        pathToConfigModule: "src/utils/typography",
-      },
-    },
     `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
     // gatsby-plugin-offline
     "gatsby-plugin-sass",
     // gatsby-plugin-google-analytics
