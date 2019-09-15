@@ -37,6 +37,7 @@ module.exports = {
       options: {
         attributes: {
           imagesdir: `/images`,
+          icons: `font`,
         },
       },
     },
