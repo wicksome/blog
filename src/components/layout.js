@@ -1,8 +1,15 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import hljs from "highlight.js"
 
 export default ({ children }) => {
+  useEffect(() => {
+    document.querySelectorAll("pre code").forEach(block => {
+      hljs.highlightBlock(block)
+    })
+  })
+
   const data = useStaticQuery(
     graphql`
       query {

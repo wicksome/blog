@@ -8,7 +8,6 @@ https://github.com/amazingengine/technology-weblog/blob/master/app/gatsby-node.j
 추가할 것
 - 댓글
 - 구글 애널리틱스
-- 아스키독 css
 - 구조
     - 디렉토리에 readme가 있으면 어떻게?
     - 파일이면 어떻게?

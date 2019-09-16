@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700");
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 @import "fonts/NanumBarunGothic/nanumbarungothicsubset.css";
 
 html {
-  font-family: "Nanum Barun Gothic", "IBM Plex Mono", monospace;
+  font-family: "Nanum Barun Gothic";
 }
 
 body {
-  font-family: "Nanum Barun Gothic", "IBM Plex Mono", monospace;
+  font-family: "Nanum Barun Gothic";
 }
 
 h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 {
-  font-family: "Nanum Barun Gothic", "IBM Plex Mono", monospace;
+  font-family: "Nanum Myeongjo";
+  font-weight: 850;
 }
 
 a {
@@ -20,6 +21,6 @@ a {
 
 pre > code,
 code {
-  font-family: "IBM Plex Mono", monospace; 
+  font-family: "IBM Plex Mono"; 
   line-height: 1.5;
 }

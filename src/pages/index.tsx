@@ -1,10 +1,7 @@
 import React from "react"
-import hljs from "highlight.js"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Layout from "../components/layout"
-
-hljs.initHighlightingOnLoad()
 
 export default ({ data }) => {
   return (

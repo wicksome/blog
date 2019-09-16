@@ -36,8 +36,9 @@ module.exports = {
       resolve: `gatsby-transformer-asciidoc`,
       options: {
         attributes: {
-          imagesdir: `/images`,
           icons: `font`,
+          "source-highlighter": `highlightjs`,
+          imagesdir: `/images`,
         },
       },
     },
