@@ -7,7 +7,10 @@
 module.exports = {
   siteMetadata: {
     title: `Documents`,
-    subtitle: `WICKSOME`,
+    links: {
+      linkedin: "https://www.linkedin.com/in/yeongjun/",
+      github: "https://github.com/wicksome",
+    },
   },
   /* Your site config here */
   plugins: [
@@ -35,6 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-asciidoc`,
       options: {
+        header_footer: true,
         attributes: {
           icons: `font`,
           "source-highlighter": `highlightjs`,

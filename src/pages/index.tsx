@@ -19,13 +19,13 @@ export default ({ data }) => {
               >
                 {node.document.title}
               </Link>
-              <span
+              <small
                 css={css`
                   color: #bbb;
                 `}
               >
-                {/* {node.revision !== null && node.revision.date} */}
-              </span>
+                {node.revision !== null && ` - ${node.revision.date}`}
+              </small>
             </h3>
             {/* <p>{node.excerpt}</p> */}
           </div>

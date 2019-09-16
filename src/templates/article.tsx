@@ -5,30 +5,8 @@ import Layout from "../components/layout"
 
 export default ({ data }) => {
   return (
-    <Layout>
-      <h1>{data.asciidoc.document.title} </h1>
-      {data.asciidoc.revision && (
-        <table>
-          <thead>
-            <tr>
-              <td colSpan="2">Revision metadata</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>revision.date</th>
-              <td>{data.asciidoc.revision.date}</td>
-            </tr>
-            <tr>
-              <th>revision.number</th>
-              <td>{data.asciidoc.revision.number}</td>
-            </tr>
-          </tbody>
-        </table>
-      )}
-      <div
-        dangerouslySetInnerHTML={{ __html: data.asciidoc.html }}
-      />
+    <Layout tocLeft={data.asciidoc.pageAttributes.tocleft !== null}>
+      <div dangerouslySetInnerHTML={{ __html: data.asciidoc.html }} />
     </Layout>
   )
 }
@@ -43,6 +21,9 @@ export const query = graphql`
       revision {
         date
         number
+      }
+      pageAttributes {
+        tocleft
       }
     }
   }

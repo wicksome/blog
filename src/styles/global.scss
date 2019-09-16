@@ -10,9 +10,24 @@ body {
   font-family: "Nanum Barun Gothic";
 }
 
-h1, h2, h3, #toctitle, .sidebarblock > .content > .title, h4, h5, h6 {
+h1,
+h2,
+h3,
+#toctitle,
+.sidebarblock > .content > .title,
+h4,
+h5,
+h6 {
   font-family: "Nanum Myeongjo";
   font-weight: 850;
+}
+
+#header > h1 {
+  font-family: "Nanum Myeongjo";
+  font-weight: 850;
+  margin-top: 0.25em;
+  // margin-bottom: 0px;
+  // padding-bottom: 0px;
 }
 
 a {
@@ -21,6 +36,19 @@ a {
 
 pre > code,
 code {
-  font-family: "IBM Plex Mono"; 
+  font-family: "IBM Plex Mono";
   line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  #asciidoc_body {
+    padding-left: 15em;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #asciidoc_body {
+    padding-left: 20em;
+    padding-right: 0;
+  }
 }
