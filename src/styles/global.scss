@@ -2,10 +2,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
 @import "fonts/NanumBarunGothic/nanumbarungothicsubset.css";
 
-html {
-  font-family: "Nanum Barun Gothic";
-}
-
+html,
 body {
   font-family: "Nanum Barun Gothic";
 }
@@ -28,7 +25,11 @@ body {
   }
   &--thick {
     background-position: 0 -0.1em;
-    background-image: linear-gradient(to right, yellow 0, rgba(255, 255, 0, 0.1) 100%);
+    background-image: linear-gradient(
+      to right,
+      yellow 0,
+      rgba(255, 255, 0, 0.1) 100%
+    );
   }
   &--offset {
     background-position: 0 0.2em;
@@ -128,5 +129,16 @@ code {
   #asciidoc_body {
     padding-left: 20em;
     padding-right: 0;
+  }
+}
+
+// keep footer to bottom of page
+article#asciidoc_article {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 3em/* header text size*/);
+
+  div#footer {
+    margin-top: auto;
   }
 }

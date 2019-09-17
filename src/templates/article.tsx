@@ -6,7 +6,10 @@ import Layout from "../components/layout"
 export default ({ data }) => {
   return (
     <Layout tocLeft={data.asciidoc.pageAttributes.tocleft !== null}>
-      <div dangerouslySetInnerHTML={{ __html: data.asciidoc.html }} />
+      <article
+        id="asciidoc_article"
+        dangerouslySetInnerHTML={{ __html: data.asciidoc.html }}
+      />
     </Layout>
   )
 }
