@@ -15,7 +15,7 @@ body {
   flex: 1;
   line-height: 1.2;
   text-decoration: none;
-  background-image: linear-gradient(to right, yellow 0, rgba(255, 255, 0, 0.1) 100%);
+  background-image: linear-gradient(to right, yellow 0, yellow 100%);
   background-position: 0 1.2em;
   background-size: 0 100%;
   background-repeat: no-repeat;
@@ -28,6 +28,7 @@ body {
   }
   &--thick {
     background-position: 0 -0.1em;
+    background-image: linear-gradient(to right, yellow 0, rgba(255, 255, 0, 0.1) 100%);
   }
   &--offset {
     background-position: 0 0.2em;
