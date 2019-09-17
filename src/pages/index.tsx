@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
+      <div id="blog_list">
         <h4>{data.allAsciidoc.totalCount} Posts</h4>
         {data.allAsciidoc.edges.map(({ node }) => (
           <div key={node.id}>

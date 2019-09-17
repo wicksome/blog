@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import hljs from "highlight.js"
+import { black } from "ansi-colors"
 
 export default ({ tocLeft = false, children }) => {
   useEffect(() => {
@@ -27,24 +28,9 @@ export default ({ tocLeft = false, children }) => {
   )
   return (
     <div id={tocLeft && "asciidoc_body"}>
-      <header
-        css={{
-          display: "flex",
-          "flex-direction": "row",
-          "flex-wrap": "nowrap",
-          "justify-content": "space-between",
-          padding: "1.25em 1em 0.25em",
-          "& *": {
-            "align-self": "flex-end",
-          },
-        }}
-      >
+      <header id="blog_header">
         <Link to={`/`}>
-          <h3
-            css={css`
-              margin: 0 auto;
-            `}
-          >
+          <h3 className="blog-title underlined underlined--thick">
             {data.site.siteMetadata.title}
           </h3>
         </Link>
@@ -55,16 +41,27 @@ export default ({ tocLeft = false, children }) => {
               float: "left",
               "& a": {
                 padding: "0 5px",
+                color: "#000",
               },
             },
           }}
         >
           <ul>
             <li>
-              <a href={data.site.siteMetadata.links.linkedin}>About</a>
+              <a
+                className="underlined underlined--offset"
+                href={data.site.siteMetadata.links.linkedin}
+              >
+                About
+              </a>
             </li>
             <li>
-              <a href={data.site.siteMetadata.links.github}>GitHub</a>
+              <a
+                className="underlined underlined--offset"
+                href={data.site.siteMetadata.links.github}
+              >
+                GitHub
+              </a>
             </li>
           </ul>
         </nav>
