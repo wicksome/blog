@@ -1,8 +1,8 @@
 import React, { useEffect } from "react"
-import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import hljs from "highlight.js"
-import { black } from "ansi-colors"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default ({ tocLeft = false, children }) => {
   useEffect(() => {
@@ -40,8 +40,11 @@ export default ({ tocLeft = false, children }) => {
               "list-style-type": "none",
               float: "left",
               "& a": {
-                padding: "0 5px",
+                padding: "0 2px",
                 color: "#000",
+                svg: {
+                  "font-size": "1.2em",
+                },
               },
             },
           }}
@@ -52,7 +55,7 @@ export default ({ tocLeft = false, children }) => {
                 className="underlined underlined--offset"
                 href={data.site.siteMetadata.links.linkedin}
               >
-                About
+                <FontAwesomeIcon icon={faLinkedinIn} fixedWidth />
               </a>
             </li>
             <li>
@@ -60,7 +63,7 @@ export default ({ tocLeft = false, children }) => {
                 className="underlined underlined--offset"
                 href={data.site.siteMetadata.links.github}
               >
-                GitHub
+                <FontAwesomeIcon icon={faGithub} fixedWidth />
               </a>
             </li>
           </ul>
