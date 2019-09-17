@@ -34,21 +34,7 @@ export default ({ tocLeft = false, children }) => {
             {data.site.siteMetadata.title}
           </h3>
         </Link>
-        <nav
-          css={{
-            "& ul>li": {
-              "list-style-type": "none",
-              float: "left",
-              "& a": {
-                padding: "0 2px",
-                color: "#000",
-                svg: {
-                  "font-size": "1.2em",
-                },
-              },
-            },
-          }}
-        >
+        <nav id="blog_nav">
           <ul>
             <li>
               <a

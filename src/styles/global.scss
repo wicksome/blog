@@ -77,6 +77,20 @@ body {
   }
 }
 
+#blog_nav {
+  ul > li {
+    list-style-type: none;
+    float: left;
+    a {
+      padding: 0 2px;
+      color: #000;
+      svg {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
 #blog_list {
   width: 100%;
   margin-left: auto;
@@ -136,7 +150,7 @@ code {
 article#asciidoc_article {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 3em/* header text size*/);
+  min-height: calc(100vh - 3em /* header text size*/);
 
   div#footer {
     margin-top: auto;
