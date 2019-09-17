@@ -41,7 +41,7 @@ export default ({ tocLeft = false, children }) => {
                 className="underlined underlined--offset"
                 href={data.site.siteMetadata.links.linkedin}
               >
-                <FontAwesomeIcon icon={faLinkedinIn} fixedWidth />
+                <FontAwesomeIcon icon={faLinkedinIn} size="xs" fixedWidth />
               </a>
             </li>
             <li>
@@ -49,7 +49,7 @@ export default ({ tocLeft = false, children }) => {
                 className="underlined underlined--offset"
                 href={data.site.siteMetadata.links.github}
               >
-                <FontAwesomeIcon icon={faGithub} fixedWidth />
+                <FontAwesomeIcon icon={faGithub} size="xs" fixedWidth />
               </a>
             </li>
           </ul>
