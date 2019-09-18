@@ -5,7 +5,7 @@ import hljs from "highlight.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
 
-const initToC = ({ document, toc }) => {
+export default ({ toc, children }) => {
   if (!toc) {
     document.body.classList.remove(
       ...go(document.body.classList, filter(clz => /^toc.*/.test(clz)))
@@ -13,10 +13,6 @@ const initToC = ({ document, toc }) => {
   } else if (!!toc && toc !== "toc") {
     document.body.classList.add("toc2", `toc-${toc}`)
   }
-}
-
-export default ({ toc, children }) => {
-  initToC({ document, toc })
 
   useEffect(() => {
     // apply source code highlight
