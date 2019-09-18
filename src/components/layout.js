@@ -8,11 +8,11 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
 export default ({ toc, children }) => {
   useEffect(() => {
     // apply toc class
-    if (toc === null) {
+    if (!toc) {
       document.body.classList.remove(
         ...go(document.body.classList, filter(clz => /^toc.*/.test(clz)))
       )
-    } else if (toc !== null && toc !== "toc") {
+    } else if (!!toc && toc !== "toc") {
       document.body.classList.add("toc2", `toc-${toc}`)
     }
 
