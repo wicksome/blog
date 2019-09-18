@@ -42,7 +42,7 @@ module.exports = {
         attributes: {
           icons: `font`,
           "source-highlighter": `highlightjs`,
-          stylesdir: `${__dirname}/src/styles`,
+          stylesdir: `/css`,
           imagesdir: `/images`,
         },
       },
