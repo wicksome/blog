@@ -1,15 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import Layout from "../components/layout"
 
-export default ({ data }) => {
+export default ({ data: { asciidoc } }) => {
+  const { html, pageAttributes: attr } = asciidoc
+  let toc = null
+
+  // init toc
+  if (attr.toc === null) toc = null
+  else if (attr.toc !== null && attr.toc.length === 0) toc = "toc"
+  else toc = attr.toc // "left" or "right"
+
   return (
-    <Layout tocLeft={data.asciidoc.pageAttributes.tocleft !== null}>
-      <article
-        id="asciidoc_article"
-        dangerouslySetInnerHTML={{ __html: data.asciidoc.html }}
-      />
+    <Layout toc={toc}>
+      <article id="asciidoctor" dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   )
 }
@@ -26,7 +30,7 @@ export const query = graphql`
         number
       }
       pageAttributes {
-        tocleft
+        toc
       }
     }
   }

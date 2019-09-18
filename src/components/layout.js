@@ -1,11 +1,22 @@
 import React, { useEffect } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import { go, filter } from "fxjs2"
 import hljs from "highlight.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
 
-export default ({ tocLeft = false, children }) => {
+export default ({ toc, children }) => {
   useEffect(() => {
+    // apply toc class
+    if (toc === null) {
+      document.body.classList.remove(
+        ...go(document.body.classList, filter(clz => /^toc.*/.test(clz)))
+      )
+    } else if (toc !== null && toc !== "toc") {
+      document.body.classList.add("toc2", `toc-${toc}`)
+    }
+
+    // apply source code highlight
     document.querySelectorAll("pre code").forEach(block => {
       hljs.highlightBlock(block)
     })
@@ -27,7 +38,7 @@ export default ({ tocLeft = false, children }) => {
     `
   )
   return (
-    <div id={tocLeft && "asciidoc_body"}>
+    <div>
       <header id="blog_header">
         <Link to={`/`}>
           <h3 className="blog-title underlined underlined--thick">
