@@ -6,15 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
 
 export default ({ toc, children }) => {
-  if (!toc) {
-    document.body.classList.remove(
-      ...go(document.body.classList, filter(clz => /^toc.*/.test(clz)))
-    )
-  } else if (!!toc && toc !== "toc") {
-    document.body.classList.add("toc2", `toc-${toc}`)
-  }
-
   useEffect(() => {
+    if (!toc) {
+      document.body.classList.remove(
+        ...go(document.body.classList, filter(clz => /^toc.*/.test(clz)))
+      )
+    } else if (!!toc && toc !== "toc") {
+      document.body.classList.add("toc2", `toc-${toc}`)
+    }
+
     // apply source code highlight
     document.querySelectorAll("pre code").forEach(block => {
       hljs.highlightBlock(block)
