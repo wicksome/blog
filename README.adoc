@@ -1,0 +1,59 @@
+
+= Documents(= blog)
+
+[link=https://app.netlify.com/sites/wicksome-blog/deploys]
+image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd4781394/deploy-status[Netlify Status]
+
+[ditaa, align="center"]
+....
++--------+      +---------+ 
+|cBLK    | hook |c1AB     | 
+| github +----->| Netlify | 
+|     {s}|      |         | 
++--------+      +----+----+
+                     |
+               build |
+                     v
+/--------------------+--------------------------\
+|                                               |
+| +----------+  +-------------+   /-----------\ |
+| |cC01      |  | cBLU        |   |           | |
+| | Asciidoc |--+   Gatsby    +-->| wickso.me | |
+| |      {d} |  |             |   |           | |
+| +----------+  +-------------+   \-----------/ |
+|      :        | React       |         ^       |
+|      |        | TypeScript  |         |       |
+|      |        | Sass        |         |       |
+|      |        | Asciidoctor |         |       |
+|      |        | highlight.js|         |       |
+|      |        | etc         |         |       |
+|      |        +-------------+         |       |
+|      |                                |       |
+|      |      Convert .adoc to Web      |       |
+|      +--------------------------------+       |
+|                                               |
+\-----------------------------------------------/
+....
+
+====
+* https://www.gatsbyjs.org/[GatsbyJS]: Blazing-fast static site generator for https://reactjs.org/[React]
+* https://reactjs.org/[React]: A JavaScript library for building user interfaces
+* http://asciidoc.org/[AsciiDoc]: Text document format for writing notes, documentation, articles, books, ebooks, slideshows, web pages, man pages and blogs.
+* https://www.netlify.com/[Netlify]: All-in-one platform for automating modern web projects.
+====
+
+[source, bash]
+----
+# clone with submodule
+$ git clone --recursive https://github.com/wicksome/blog-renewal.git
+# start
+$ cd blog-renewal
+$ yarn && yarn start
+----
+
+// .추가할 것
+// * 이미지가 같이 있으면 어떻게?
+// * 마크다운 피피티도??
+// * slide 서브모듈?
+// * font: https://github.com/moonspam/NanumBarunGothic
+
