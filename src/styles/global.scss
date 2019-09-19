@@ -1,17 +1,23 @@
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap");
-@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-@import "fonts/NanumBarunGothic/nanumbarungothicsubset.css";
+@import "fonts/font";
+@import "asciidoc-overwrite.scss";
+
+@import "external/underlined.scss";
 
 html,
 body {
-  font-family: "Nanum Barun Gothic";
+  font-family: $text-font !important;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: $title-font;
+    font-weight: 850;
+  }
 }
 
 a {
   text-decoration: none;
 }
-
-@import "underlined.scss";
 
 #blog_header {
   // align of header
@@ -67,45 +73,4 @@ a {
   padding-top: 0.5em;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
-}
-
-h1,
-h2,
-h3,
-#toctitle,
-.sidebarblock > .content > .title,
-h4,
-h5,
-h6 {
-  font-family: "Nanum Myeongjo";
-  font-weight: 850;
-}
-
-#header > h1 {
-  font-family: "Nanum Myeongjo";
-  font-weight: 850;
-  margin-top: 0.25em;
-}
-
-pre > code,
-code {
-  font-family: "IBM Plex Mono";
-  line-height: 1.5;
-}
-
-// keep footer to bottom of page
-article#asciidoctor {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 3em /* header text size*/);
-
-  div#footer {
-    margin-top: auto;
-    // background-color: transparent;
-    background-color: rgb(236, 236, 236);
-
-    div#footer-text {
-      color: #000;
-    }
-  }
 }
