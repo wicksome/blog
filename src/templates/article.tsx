@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import { Utterances, UtterancesStyle } from "../components/utterances"
+import Utterances from "utterances-react"
 
 export default ({ data: { asciidoc } }) => {
   // const isProduction = process.env.NODE_ENV === "production"
@@ -17,7 +17,7 @@ export default ({ data: { asciidoc } }) => {
   return (
     <Layout toc={toc}>
       <article id="asciidoctor" dangerouslySetInnerHTML={{ __html: html }} />
-      {isProduction && <Utterances repo="wicksome/blog" />}
+      {isProduction && <Utterances repo="wicksome/blog" label="🏷" />}
     </Layout>
   )
 }
