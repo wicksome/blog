@@ -5,6 +5,8 @@
         "fontawesome",
         "fortawesome",
         "hljs",
-        "linkedin"
+        "linkedin",
+        "sidebarblock",
+        "toctitle"
     ]
 }

@@ -38,18 +38,21 @@ module.exports = {
     {
       resolve: `gatsby-transformer-asciidoc`,
       options: {
+        base_dir: `${__dirname}/posts`,
         header_footer: true,
         attributes: {
           icons: `font`,
-          "source-highlighter": `highlightjs`,
           stylesdir: `/css`,
           imagesdir: `/images`,
+          nofooter: true,
+          tabsize: 2,
+          "source-highlighter": `highlightjs`,
         },
       },
     },
+    "gatsby-plugin-sass",
     `gatsby-plugin-emotion`,
     // gatsby-plugin-offline
-    "gatsby-plugin-sass",
     // gatsby-plugin-google-analytics
   ],
 }
