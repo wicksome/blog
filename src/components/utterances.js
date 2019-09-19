@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import { Global } from "@emotion/core"
 
 const src = "https://utteranc.es/client.js"
 
@@ -24,16 +23,17 @@ export const Utterances = ({ repo }) => {
     rootElm.current.appendChild(utterances)
   }, [])
 
-  return <div className="utterances" ref={rootElm} />
+  return (
+    <div
+      id="utterances_container"
+      ref={rootElm}
+      css={{
+        "& .utterances": {
+          maxWidth: "950px",
+        },
+      }}
+    />
+  )
 }
 
-// Based on prism.js okaidai theme
-export const UtterancesStyle = () => (
-  <Global
-    styles={{
-      ".utterances": {
-        maxWidth: "950px",
-      },
-    }}
-  />
-)
+export default Utterances
