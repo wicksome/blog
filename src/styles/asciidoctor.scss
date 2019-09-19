@@ -1,0 +1,48 @@
+// asciidoctor
+// css 에서 점진적으로 scss 로 변경하고자 생성한 파일
+
+.quoteblock {
+  margin: 0 1em 1.25em 1.5em;
+  display: table;
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  blockquote,
+  blockquote p {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 1.15rem;
+    line-height: 1.75;
+    word-spacing: 0.1em;
+    letter-spacing: 0;
+    font-style: italic;
+    text-align: justify;
+  }
+
+  blockquote:before {
+    content: "\201c";
+    float: left;
+    font-size: 2.75em;
+    font-weight: bold;
+    line-height: 0.6em;
+    margin-left: -0.6em;
+    color: #7a2717;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .attribution {
+    margin-top: 0.5em;
+    margin-right: 0.5ex;
+    text-align: right;
+  }
+}
+
+.quoteblock .attribution,
+.verseblock .attribution {
+  font-size: 0.9375em;
+  line-height: 1.45;
+  font-style: italic;
+}

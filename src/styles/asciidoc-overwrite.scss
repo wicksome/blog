@@ -17,6 +17,16 @@ article#asciidoctor {
     line-height: 1.5;
   }
 
+  .admonitionblock {
+    font-size: 0.9em;
+  }
+
+  // div#content > dev.sect1 > h2:first-child {
+  // div#content > dev:first-child > h2 {
+  div#content > div.sect1:first-child > h2 {
+    margin-top: 0em;
+  }
+
   // display: flex;
   // flex-direction: column;
   // min-height: calc(100vh - 3em /* header text size*/);

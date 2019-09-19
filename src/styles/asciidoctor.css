@@ -429,12 +429,12 @@ table.pyhltable td.code { padding-left: .75em; padding-right: 0; }
 
 table.pyhltable .linenodiv { background-color: transparent !important; padding-right: 0 !important; }
 
-.quoteblock { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; }
-.quoteblock blockquote { margin: 0 0 1.25em 0; padding: 0 0 0.5625em 0; border: 0; }
-.quoteblock blockquote > .paragraph:last-child p { margin-bottom: 0; }
-.quoteblock .attribution { margin-top: -.25em; padding-bottom: 0.5625em; font-size: inherit; color: #555555; }
-.quoteblock .attribution br { display: none; }
-.quoteblock .attribution cite { display: block; margin-bottom: 0.625em; }
+/* .quoteblock { margin: 0 0 1.25em; padding: 0.5625em 1.25em 0 1.1875em; border-left: 1px solid #dddddd; } */
+/* .quoteblock blockquote { margin: 0 0 1.25em 0; padding: 0 0 0.5625em 0; border: 0; } */
+/* .quoteblock blockquote > .paragraph:last-child p { margin-bottom: 0; } */
+/* .quoteblock .attribution { margin-top: -.25em; padding-bottom: 0.5625em; font-size: inherit; color: #555555; } */
+/* .quoteblock .attribution br { display: none; } */
+/* .quoteblock .attribution cite { display: block; margin-bottom: 0.625em; } */
 
 table thead th, table tfoot th { font-weight: bold; }
 

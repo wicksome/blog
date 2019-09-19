@@ -7,7 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
   return graphql(
     `
       {
-        allAsciidoc(sort: { fields: [revision___date], order: DESC }) {
+        allAsciidoc(sort: { order: DESC, fields: [revision___date] }) {
           edges {
             node {
               id
@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
 
 exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
   const { createNodeField } = actions
-  
+
   if (node.internal.type === `Asciidoc`) {
     const value = createFilePath({ node, getNode })
     createNodeField({
