@@ -17,7 +17,17 @@ export default ({ data: { asciidoc } }) => {
   return (
     <Layout toc={toc}>
       <article id="asciidoctor" dangerouslySetInnerHTML={{ __html: html }} />
-      {isProduction && <Utterances repo="wicksome/blog" label="🏷" />}
+      {isProduction && (
+        <Utterances
+          repo="wicksome/blog"
+          label="🏷"
+          style={`
+      & .utterances {
+        max-width: 950px;
+      }
+      `}
+        />
+      )}
     </Layout>
   )
 }
