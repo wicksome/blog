@@ -12,7 +12,7 @@ image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd478139
 |     {s}|      |         | 
 +--------+      +----+----+
                      |
-               build |
+                     |build & deploy
                      v
 /--------------------+--------------------------\
 |                                               |
