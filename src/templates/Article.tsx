@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import Utterances from "utterances-react"
 
 export default ({ data: { asciidoc } }) => {
