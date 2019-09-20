@@ -31,7 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     // Create Asciidoc pages.
-    const articleTemplate = path.resolve(`./src/templates/article.tsx`)
+    const articleTemplate = path.resolve(`./src/templates/Article.tsx`)
 
     const posts = result.data.allAsciidoc.edges
 
