@@ -42,6 +42,34 @@ image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd478139
 * https://www.netlify.com/[Netlify]: All-in-one platform for automating modern web projects.
 ====
 
+.Directory Structure
+....
+.
+├── posts/ <1>
+├── src
+│   ├── components
+│   │   └── Layout.js <2>
+│   ├── pages
+│   │   └── index.tsx <3>
+│   ├── templates
+│   │   └── article.tsx <4>
+│   └── styles
+│       └── global.scss <5>
+├── static
+│   ├── css/
+│   └── favicon.ico
+├── gatsby-browser.js
+├── gatsby-config.js
+├── gatsby-node.js
+└── package.json
+....
+<1> Directory that AsciiDoc files are stored for posting. This is https://git-scm.com/book/en/v2/Git-Tools-Submodules[Submodules].
+<2> `<Layout />`: React Component
+<3> Main Layout
+<4> Article layout
+<5> Global Style Sheet
+
+
 [source, bash]
 ----
 # clone with submodule
