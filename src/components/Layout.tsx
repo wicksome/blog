@@ -5,7 +5,11 @@ import hljs from "highlight.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"
 
-export default ({ toc, children }) => {
+interface Props {
+  toc?: string
+}
+
+const Layout: React.SFC<Props> = ({ toc, children }) => {
   useEffect(() => {
     if (!toc) {
       document.body.classList.remove(
@@ -69,3 +73,5 @@ export default ({ toc, children }) => {
     </div>
   )
 }
+
+export default Layout
