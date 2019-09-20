@@ -37,7 +37,10 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    allAsciidoc(sort: { fields: [revision___date], order: DESC }) {
+    allAsciidoc(
+      filter: { pageAttributes: { draft: { eq: null } } }
+      sort: { order: DESC, fields: [revision___date] }
+    ) {
       totalCount
       edges {
         node {
@@ -51,6 +54,9 @@ export const query = graphql`
           }
           fields {
             slug
+          }
+          pageAttributes {
+            keyword
           }
         }
       }
