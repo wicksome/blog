@@ -1,4 +1,4 @@
-= Documents(= blog)
+= 📚 Documents
 :source-highlighter: pygments
 
 [link=https://app.netlify.com/sites/wicksome-blog/deploys]
@@ -64,9 +64,9 @@ image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd478139
 └── package.json
 ....
 <1> Directory that AsciiDoc files are stored for posting. This is https://git-scm.com/book/en/v2/Git-Tools-Submodules[Submodules].
-<2> `<Layout />`: React Component
+<2> `<Layout />`: The base layout with header, footer, etc. `#react-component`
 <3> Main Layout
-<4> Article layout
+<4> `<Article />`: The article layout with html created from the asciidoctor  `#react-component` `#asciidoctor`
 <5> Global Style Sheet
 
 
