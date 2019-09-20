@@ -1,5 +1,5 @@
-
 = Documents(= blog)
+:source-highlighter: pygments
 
 [link=https://app.netlify.com/sites/wicksome-blog/deploys]
 image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd4781394/deploy-status[Netlify Status]
@@ -52,7 +52,7 @@ image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd478139
 │   ├── pages
 │   │   └── index.tsx <3>
 │   ├── templates
-│   │   └── article.tsx <4>
+│   │   └── Article.tsx <4>
 │   └── styles
 │       └── global.scss <5>
 ├── static
