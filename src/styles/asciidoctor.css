@@ -295,12 +295,6 @@ p a > code:hover { color: #561309; }
 #header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after { content: " "; display: table; }
 #header:after, #content:after, #footnotes:after, #footer:after { clear: both; }
 
-#header br { display: none; }
-#header br + span { padding-left: 3px; }
-#header br + span:before { content: "\2013 \0020"; }
-#header br + span.author { padding-left: 0; }
-#header br + span.author:before { content: ", "; }
-
 #toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
 #toc>ul{margin-left:.125em}
 #toc ul.sectlevel0>li>a{font-style:italic}

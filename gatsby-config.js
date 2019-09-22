@@ -3,9 +3,11 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const WEB_NAME = "Documents"
+
 module.exports = {
   siteMetadata: {
-    title: `Documents`,
+    title: WEB_NAME,
     description: "",
     url: "https://wickso.me",
     image: "/images/snape.jpg",
@@ -52,15 +54,27 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-sass",
+    `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-react-helmet`,
-    // gatsby-plugin-offline
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Wicksome Documents`,
+        short_name: `Wicksome Docs`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-43444044-3",
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
   ],
 }

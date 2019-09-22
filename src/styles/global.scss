@@ -24,11 +24,14 @@ a {
 }
 
 *:not(pre) > code {
-  color: #000;
+  background-color: #f6f6f6;
+  color: #9c2525;
   font-size: 0.9em;
-  padding: 1.5px 3px 1.5px 3px;
+  font-weight: bold;
+  padding: 0.125rem 0.25rem;
+  margin-left: 0;
+  margin-right: 0;
   white-space: nowrap;
-  background-color: #e0e0e0;
   text-shadow: none;
 }
 

@@ -9,15 +9,24 @@ div#header {
     margin-bottom: 0.05em;
   }
 
+  br {
+    display: none;
+  }
+
   .details {
     border-bottom: 1px solid #efefed;
     padding-bottom: 0.25em;
     line-height: 1.3em;
+
+    span:not(#revdate) {
+      display: none;
+    }
   }
 
   span {
     color: #6f6f6f;
   }
+
   #revnumber {
     text-transform: capitalize;
   }
