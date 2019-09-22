@@ -15,11 +15,22 @@ body {
   h#{$i} {
     font-family: $title-font;
     font-weight: 850;
+    // color: #232e8c;
   }
 }
 
 a {
   text-decoration: none;
+}
+
+*:not(pre) > code {
+  color: white;
+  font-size: 0.9em;
+  padding: 2px 3px 2px 3px;
+  white-space: nowrap;
+  background-color: #000000;
+  border-radius: 2px;
+  text-shadow: none;
 }
 
 #blog_header {
