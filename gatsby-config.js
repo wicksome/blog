@@ -56,6 +56,11 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     // gatsby-plugin-offline
-    // gatsby-plugin-google-analytics
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-43444044-3",
+      },
+    },
   ],
 }
