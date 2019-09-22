@@ -1,7 +1,9 @@
 const path = require(`path`)
 const slash = require(`slash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const htmlToText = require("html-to-text")
 
+// https://www.gatsbyjs.org/docs/node-apis/#createPages
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return graphql(
@@ -11,6 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               id
+              html
               document {
                 title
               }
@@ -32,9 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create Asciidoc pages.
     const articleTemplate = path.resolve(`./src/templates/Article.tsx`)
-
     const posts = result.data.allAsciidoc.edges
-
     posts.forEach(({ node }, index) => {
       createPage({
         path: node.fields.slug,
@@ -50,6 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
+// https://www.gatsbyjs.org/docs/node-apis/#onCreateNode
 exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
   const { createNodeField } = actions
 
@@ -60,5 +62,16 @@ exports.onCreateNode = async ({ node, actions, getNode, loadNodeContent }) => {
       node,
       value,
     })
+
+    // make description for og tag
+    // TODO: Set description of OG tag if hasn't description metadata
+    const partOfBody = htmlToText
+      .fromString(node.html, {
+        baseElement: "div#content",
+        ignoreImage: true,
+        singleNewLineParagraphs: true,
+      })
+      .slice(0, 300)
+      .replace(/(?:\r\n|\r|\n)/g, " ")
   }
 }

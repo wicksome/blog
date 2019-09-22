@@ -3,16 +3,18 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
 module.exports = {
   siteMetadata: {
     title: `Documents`,
-    links: {
-      linkedin: "https://www.linkedin.com/in/yeongjun/",
-      github: "https://github.com/wicksome",
+    description: "",
+    url: "https://wickso.me",
+    image: "/images/snape.jpg",
+    social: {
+      linkedin: "yeongjun",
+      github: "wicksome",
+      twitter: "wicksome",
     },
   },
-  /* Your site config here */
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -30,9 +32,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
-        isTSX: true, // defaults to false
-        jsxPragma: `jsx`, // defaults to "React"
-        allExtensions: true, // defaults to false
+        isTSX: true, // default: false
+        jsxPragma: `jsx`, // default: "React"
+        allExtensions: true, // default: false
       },
     },
     {
@@ -52,6 +54,7 @@ module.exports = {
     },
     "gatsby-plugin-sass",
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
     // gatsby-plugin-offline
     // gatsby-plugin-google-analytics
   ],

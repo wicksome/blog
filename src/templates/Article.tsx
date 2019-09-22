@@ -1,13 +1,18 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
 import Utterances from "utterances-react"
 
-export default ({ data: { asciidoc } }) => {
-  // const isProduction = process.env.NODE_ENV === "production"
-  const isProduction = true
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+
+// export default ({ data: { asciidoc }, yj }) => {
+export default ({ data, yj }) => {
+  const asciidoc = data.asciidoc
   const { html, pageAttributes: attr } = asciidoc
   let toc = null
+
+  console.log(asciidoc)
 
   // init toc
   if (attr.toc === null) toc = null
@@ -15,20 +20,25 @@ export default ({ data: { asciidoc } }) => {
   else toc = attr.toc // "left" or "right"
 
   return (
-    <Layout toc={toc}>
-      <article id="asciidoctor" dangerouslySetInnerHTML={{ __html: html }} />
-      {isProduction && (
+    <React.Fragment>
+      <SEO
+        title={asciidoc.document.title}
+        pathname={asciidoc.fields.slug}
+        article
+      />
+      <Layout toc={toc}>
+        <article id="asciidoctor" dangerouslySetInnerHTML={{ __html: html }} />
         <Utterances
           repo="wicksome/blog"
           label="🏷"
           style={`
-      & .utterances {
-        max-width: 950px;
-      }
-      `}
+            & .utterances {
+              max-width: 950px;
+            }
+          `}
         />
-      )}
-    </Layout>
+      </Layout>
+    </React.Fragment>
   )
 }
 
@@ -42,6 +52,9 @@ export const query = graphql`
       revision {
         date
         number
+      }
+      fields {
+        slug
       }
       pageAttributes {
         toc

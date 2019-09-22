@@ -5,10 +5,14 @@
         "admonitionblock",
         "fontawesome",
         "fortawesome",
+        "fxjs",
         "hljs",
         "linkedin",
+        "opid",
         "quoteblock",
+        "revdate",
         "sidebarblock",
-        "toctitle"
+        "toctitle",
+        "wicksome"
     ]
 }

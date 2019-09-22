@@ -9,6 +9,10 @@ interface Props {
   toc?: string
 }
 
+const defaultProps: Props = {
+  toc: null,
+}
+
 const Layout: React.SFC<Props> = ({ toc, children }) => {
   useEffect(() => {
     if (!toc) {
@@ -25,15 +29,18 @@ const Layout: React.SFC<Props> = ({ toc, children }) => {
     })
   })
 
-  const data = useStaticQuery(
+  const {
+    site: { metadata },
+  } = useStaticQuery(
     graphql`
       query {
         site {
-          siteMetadata {
+          metadata: siteMetadata {
             title
-            links {
+            social {
               linkedin
               github
+              twitter
             }
           }
         }
@@ -45,7 +52,7 @@ const Layout: React.SFC<Props> = ({ toc, children }) => {
       <header id="blog_header">
         <Link to={`/`}>
           <h3 className="blog-title underlined underlined--thick">
-            {data.site.siteMetadata.title}
+            {metadata.title}
           </h3>
         </Link>
         <nav id="blog_nav">
@@ -53,7 +60,7 @@ const Layout: React.SFC<Props> = ({ toc, children }) => {
             <li>
               <a
                 className="underlined underlined--offset"
-                href={data.site.siteMetadata.links.linkedin}
+                href={`https://www.linkedin.com/in/${metadata.social.linkedin}`}
               >
                 <FontAwesomeIcon icon={faLinkedinIn} size="xs" fixedWidth />
               </a>
@@ -61,7 +68,7 @@ const Layout: React.SFC<Props> = ({ toc, children }) => {
             <li>
               <a
                 className="underlined underlined--offset"
-                href={data.site.siteMetadata.links.github}
+                href={`https://github.com/${metadata.social.github}`}
               >
                 <FontAwesomeIcon icon={faGithub} size="xs" fixedWidth />
               </a>
@@ -73,5 +80,6 @@ const Layout: React.SFC<Props> = ({ toc, children }) => {
     </div>
   )
 }
+Layout.defaultProps = defaultProps
 
 export default Layout
