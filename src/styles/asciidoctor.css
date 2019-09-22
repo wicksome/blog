@@ -297,10 +297,6 @@ p a > code:hover { color: #561309; }
 #header:before, #header:after, #content:before, #content:after, #footnotes:before, #footnotes:after, #footer:before, #footer:after { content: " "; display: table; }
 #header:after, #content:after, #footnotes:after, #footer:after { clear: both; }
 
-#header { margin-bottom: 2.5em; }
-#header > h1 { color: black; font-weight: normal; border-bottom: 1px solid #dddddd; margin-bottom: -28px; padding-bottom: 32px; }
-#header span { color: #6f6f6f; }
-#header #revnumber { text-transform: capitalize; }
 #header br { display: none; }
 #header br + span { padding-left: 3px; }
 #header br + span:before { content: "\2013 \0020"; }

@@ -1,12 +1,14 @@
 @import "fonts/font";
-@import "asciidoctor.scss";
-@import "asciidoc-overwrite.scss";
+
+article#asciidoctor {
+  @import "asciidoctor.scss";
+}
 
 @import "external/underlined.scss";
 
 html,
 body {
-  font-family: $text-font !important;
+  font-family: $text-font;
 }
 
 @for $i from 1 through 6 {

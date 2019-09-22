@@ -1,0 +1,29 @@
+div#header {
+  margin-bottom: 2em;
+
+  h1 {
+    font-family: $title-font;
+    color: black;
+    font-weight: 850;
+    margin-top: 0.25em;
+    margin-bottom: 0.05em;
+  }
+
+  .details {
+    border-bottom: 1px solid #efefed;
+    padding-bottom: 0.25em;
+    line-height: 1.3em;
+  }
+
+  span {
+    color: #6f6f6f;
+  }
+  #revnumber {
+    text-transform: capitalize;
+  }
+
+  #toctitle {
+    font-family: $title-font;
+    font-weight: 850;
+  }
+}

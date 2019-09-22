@@ -1,5 +1,5 @@
 // asciidoctor
-// css 에서 점진적으로 scss 로 변경하고자 생성한 파일
+@import "asciidoc/header.scss";
 
 .quoteblock {
   margin: 0 1em 1.25em 1.5em;
@@ -45,4 +45,25 @@
   font-size: 0.9375em;
   line-height: 1.45;
   font-style: italic;
+}
+
+.sidebarblock > .content > .title {
+  font-family: $title-font;
+  font-weight: 850;
+}
+
+pre > code,
+code {
+  font-family: $source-code-font;
+  line-height: 1.5;
+}
+
+.admonitionblock {
+  font-size: 0.9em;
+}
+
+// div#content > dev.sect1 > h2:first-child {
+// div#content > dev:first-child > h2 {
+div#content > div.sect1:first-child > h2 {
+  margin-top: 0em;
 }
