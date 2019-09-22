@@ -5,14 +5,13 @@ import Utterances from "utterances-react"
 
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import TagList from "../components/TagList"
 
 // export default ({ data: { asciidoc }, yj }) => {
-export default ({ data, yj }) => {
+export default ({ data }) => {
   const asciidoc = data.asciidoc
   const { html, pageAttributes: attr } = asciidoc
   let toc = null
-
-  console.log(asciidoc)
 
   // init toc
   if (attr.toc === null) toc = null
@@ -28,6 +27,9 @@ export default ({ data, yj }) => {
       />
       <Layout toc={toc}>
         <article id="asciidoctor" dangerouslySetInnerHTML={{ __html: html }} />
+        <TagList
+          tags={attr.tags ? attr.tags.split(",").map(tag => tag.trim()) : []}
+        />
         <Utterances
           repo="wicksome/blog"
           label="🏷"
@@ -58,6 +60,7 @@ export const query = graphql`
       }
       pageAttributes {
         toc
+        tags
       }
     }
   }
