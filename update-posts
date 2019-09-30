@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# TODO: if has $1, set to the git message
+
+cd posts
+git add -A
+git commit -m "Update posts"
+cd ..
+git add posts
+git commit -m "Update posts"
+git push origin master
+
