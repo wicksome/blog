@@ -4,6 +4,8 @@
 [link=https://app.netlify.com/sites/wicksome-blog/deploys]
 image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd4781394/deploy-status[Netlify Status]
 
+== Structure
+
 [ditaa, align="center"]
 ....
 +--------+      +---------+ 
@@ -18,7 +20,7 @@ image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd478139
 |                                               |
 | +----------+  +-------------+   /-----------\ |
 | |cC01      |  | cBLU        |   |           | |
-| | Asciidoc |--+   Gatsby    +-->| wickso.me | |
+| | Asciidoc |--+   Gatsby    +-->|  website  | |
 | |      {d} |  |             |   |           | |
 | +----------+  +-------------+   \-----------/ |
 |      :        | React       |         ^       |
@@ -29,7 +31,7 @@ image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd478139
 |      |        | etc         |         |       |
 |      |        +-------------+         |       |
 |      |                                |       |
-|      |      Convert .adoc to Web      |       |
+|      |      Convert .adoc to html     |       |
 |      +--------------------------------+       |
 |                                               |
 \-----------------------------------------------/
@@ -69,13 +71,37 @@ image::https://api.netlify.com/api/v1/badges/cf525bed-c06d-471c-85ae-424fd478139
 <4> `<Article />`: The article layout with html created from the asciidoctor  `#react-component` `#asciidoctor`
 <5> Global Style Sheet
 
+== Initialization
 
+. Install npm, yarn
++
 [source, bash]
 ----
-# clone with submodule
-$ git clone --recursive https://github.com/wicksome/blog-renewal.git
-# start
-$ cd blog-renewal
+$ brew install node
+$ npm install --global yarn
+----
+
+. Clone git repository
++
+[source, bash]
+.A. clone repo with submodules
+----
+$ git clone --recursive https://github.com/wicksome/blog.git
+----
++
+[source, bash]
+.B. clone repo and then init submodules
+----
+$ git clone https://github.com/wicksome/blog.git
+$ git submodule init
+$ git submodule update
+----
+
+. Init the blog project
++
+[source, bash]
+----
+$ cd blog
 $ yarn && yarn start
 ----
 
