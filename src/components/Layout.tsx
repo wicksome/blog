@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import { go, filter } from "fxjs2"
+import { go, filter } from "fxjs"
 import hljs from "highlight.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons"

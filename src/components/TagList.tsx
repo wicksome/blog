@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { go, filter } from "fxjs2"
+import { go, filter } from "fxjs"
 
 interface Props {
   tags: string[]
